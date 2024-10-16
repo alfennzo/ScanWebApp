@@ -33,7 +33,7 @@ const ViewCart = () => {
     updatedCart = updatedCart.filter(item => item.quantity > 0);
 
     setCart(updatedCart);
-    sessionStorage.setItem('cart', JSON.stringify(updatedCart)); // Update sessionStorage
+    sessionStorage.setItem("cart", JSON.stringify(updatedCart)); // Update sessionStorage
   };
 
   // Calculate total costs
@@ -58,8 +58,8 @@ const ViewCart = () => {
         {/* Header */}
         <div className="flex items-center justify-between pb-4">
           <div className="flex items-center">
-            <Image src='/haldiram.png'width={100} height={100} alt="Logo" className="h-8 w-8" />
-            <h1 className="ml-2 font-bold text-lg">Haldiram's Connaught Place</h1>
+            <Image src="/haldiram.png" width={100} height={100} alt="Logo" className="h-8 w-8" />
+            <h1 className="ml-2 font-bold text-lg">Haldiram&apos;s Connaught Place</h1>
           </div>
           <button className="text-xl font-bold text-red-500">✖</button>
         </div>
@@ -82,7 +82,7 @@ const ViewCart = () => {
               {cartItems.map((item) => (
                 <div key={item.id} className="flex items-center justify-between mb-4 bg-white p-2 rounded-lg">
                   <div className="flex items-center">
-                    <Image src='/pizza.png' width={100} height={100} alt={item.name} className="h-20 w-20 object-cover rounded-full mr-4" />
+                    <Image src="/pizza.png" width={100} height={100} alt={item.name} className="h-20 w-20 object-cover rounded-full mr-4" />
                     <div>
                       <h4 className="font-semibold">{item.name}</h4>
                       <p className="text-sm text-gray-500">Large 500</p>

@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const FoodList = ({ addToCart, removeFromCart, cart }) => {
     const foodItems = [
-        { id: 1, name: 'Dish Name 1', price: 300, image: '/demo.jpeg', rating: 4.5, veg: true },
-        { id: 2, name: 'Dish Name 2', price: 600, image: '/food3.png', rating: 3.5, veg: true },
-        { id: 3, name: 'Dish Name 3', price: 499, image: '/food0.png', rating: 4.0, veg: true },
+        { id: 1, name: "Dish Name 1", price: 300, image: "/demo.jpeg", rating: 4.5, veg: true },
+        { id: 2, name: "Dish Name 2", price: 600, image: "/food3.png", rating: 3.5, veg: true },
+        { id: 3, name: "Dish Name 3", price: 499, image: "/food0.png", rating: 4.0, veg: true },
     ];
 
     return (
@@ -22,7 +22,7 @@ const FoodList = ({ addToCart, removeFromCart, cart }) => {
                             <div className="flex flex-col items-start">
                                 {item.veg && (
                                     <Image
-                                        src='/sign.png'
+                                        src="/sign.png"
                                         alt="Vegetarian"
                                         width={100}
                                         height={100}

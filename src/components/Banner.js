@@ -10,7 +10,7 @@ const Banner = ({ brand }) => {
                     {/* Haldiram Logo and Outlet Name */}
                     <div className="flex ">
                         <Image
-                            src='/haldiram.png'
+                            src="/haldiram.png"
                             alt="Haldiram Logo"
                             className="h-8 w-8 object-contain" // Adjust logo size
                             width={100}
@@ -18,7 +18,7 @@ const Banner = ({ brand }) => {
                         />
                         <div className="ml-3">
                             <h1 className="text-xl font-bold text-orange-600">{brand}</h1>
-                            <p className="text-gray-600 text-sm">Haldiram's Connaught Place</p>
+                            <p className="text-gray-600 text-sm">Haldiram&apos;s Connaught Place</p>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ const Banner = ({ brand }) => {
             {/* Banner Image */}
             <div className="bg-gray-300 md:h-80 h-32">
                 <Image
-                    src='/image.png'
+                    src="/image.png"
                     width={500}
                     height={500}
                     alt="Haldiram Web Banner"

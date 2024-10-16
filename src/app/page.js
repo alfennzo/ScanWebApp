@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <>
-        <Navbar/>
+      <Navbar/>
 
       {/* Banner Section */}
       <Banner brand={brandName} />

@@ -47,7 +47,7 @@ const Payment = () => {
             <div className="bg-[#FF7B2A] text-white py-12 rounded-b-[50px] relative"> {/* Increased padding to make the header taller */}
                 <button className="absolute top-6 right-6 text-xl font-bold text-white" onClick={handleCross}>✖</button> {/* Added margin to position the close button properly */}
                 <div className="flex justify-center mt-6"> {/* Added margin-top for gap between top and logo */}
-                    <Image src='/logo1.png' width={100} height={100} alt="Logo" className="h-16 w-auto" /> {/* Increased logo size */}
+                    <Image src="/logo1.png" width={100} height={100} alt="Logo" className="h-16 w-auto" /> {/* Increased logo size */}
                 </div>
                 <h3 className="text-center mt-6 text-lg font-semibold">Total Balance</h3> {/* Increased margin-top for spacing */}
                 <h1 className="text-center text-3xl font-bold mt-2">₹ {total}</h1>
