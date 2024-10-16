@@ -3,14 +3,14 @@ import React, { useState, useCallback } from 'react';
 import foodImage from "@/assets/food0.png";
 
 // Brand name passed to components
-const brandName = 'Haldiram';
+const brandName = "Haldiram";
 
 // Banner component
 const Banner = ({ brand }) => {
   return (
     <div className="bg-gray-200 p-4 text-center">
       <h1 className="text-3xl font-bold">{brand}</h1>
-      <p className="text-sm">Haldiram's Connaught Place</p>
+      <p className="text-sm">Haldiram&apos;s Connaught Place</p>
       <div className="bg-gray-300 h-32 mt-4">Banner Placeholder</div>
     </div>
   );

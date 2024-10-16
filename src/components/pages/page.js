@@ -55,8 +55,8 @@ const ViewCart = () => {
         {/* Header */}
         <div className="flex items-center justify-between pb-4">
           <div className="flex items-center">
-            <Image src='/assets/haldiram.png' alt="Logo" className="h-8 w-8" />
-            <h1 className="ml-2 font-bold text-lg">Haldiram's Connaught Place</h1>
+            <Image src="/haldiram.png" alt="Logo" className="h-8 w-8" />
+            <h1 className="ml-2 font-bold text-lg">Haldiram&apos;s Connaught Place</h1>
           </div>
           <button className="text-xl font-bold text-red-500">✖</button>
         </div>
@@ -131,7 +131,7 @@ const ViewCart = () => {
 
         {/* Payment Button */}
         <button
-          className={`mt-6 w-full bg-orange-500 text-white py-3 rounded-md font-bold text-lg ${cartItems.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`mt-6 w-full bg-orange-500 text-white py-3 rounded-md font-bold text-lg ${cartItems.length === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
           disabled={cartItems.length === 0}
           onClick={handlePayment} // Navigate to payment when clicked
         >
