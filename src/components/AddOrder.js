@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useCallback } from 'react';
-import foodImage from "@/assets/food0.png";
-
+import Image from 'next/image';
 // Brand name passed to components
 const brandName = "Haldiram";
 
@@ -66,7 +65,7 @@ const FoodList = ({ addToCart, removeFromCart, cart }) => {
 
           {/* Image - Now on the Right */}
           <div className="ml-4">
-            <img src='/food0.png' alt={item.name} className="h-20 w-20 object-cover rounded-lg" />
+            <Image src='/food0.png' alt={item.name} className="h-20 w-20 object-cover rounded-lg" />
           </div>
           
           {/* Rating Section */}

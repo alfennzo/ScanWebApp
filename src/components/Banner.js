@@ -25,13 +25,14 @@ const Banner = ({ brand }) => {
             </div>
 
             {/* Banner Image */}
-            <div className="bg-gray-300 md:h-80 h-32">
-                <Image
-                    src="/image.png"
-                    width={500}
-                    height={500}
-                    alt="Haldiram Web Banner"
-                    className="w-full h-full object-cover" // Adjust to make the image responsive
+            <div className="bg-gray-300 md:h-80 h-40">
+            <video
+                    src="/banner.mp4" // Path to your video file
+                    className="w-full h-full object-cover" // Make the video responsive
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                 />
             </div>
         </>
