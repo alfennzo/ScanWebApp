@@ -25,8 +25,8 @@ const Banner = ({ brand }) => {
             </div>
 
             {/* Banner Image */}
-            <div className="bg-gray-300 md:h-80 h-40">
-            <video
+            <div className="bg-gray-300 md:h-[500px] h-40">
+                <video
                     src="/banner.mp4" // Path to your video file
                     className="w-full h-full object-cover" // Make the video responsive
                     autoPlay
