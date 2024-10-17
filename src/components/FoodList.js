@@ -4,8 +4,9 @@ import Image from 'next/image';
 const FoodList = ({ addToCart, removeFromCart, cart }) => {
     const foodItems = [
         { id: 1, name: "Dish Name 1", price: 300, image: "/demo.jpeg", rating: 4.5, veg: true },
-        { id: 2, name: "Dish Name 2", price: 600, image: "/food3.png", rating: 3.5, veg: true },
+        { id: 2, name: "Dish Name 2", price: 600, image: "/burgar.webp", rating: 3.5, veg: true },
         { id: 3, name: "Dish Name 3", price: 499, image: "/food0.png", rating: 4.0, veg: true },
+        { id: 4, name: "Dish Name 4", price: 249, image: "/noodles.jpg", rating: 3.9, veg: true },
     ];
 
     return (
@@ -13,7 +14,7 @@ const FoodList = ({ addToCart, removeFromCart, cart }) => {
             {foodItems.map((item) => (
                 <div
                     key={item.id}
-                    className="flex justify-between items-center p-4 bg-white border  shadow-2xl mb-4"
+                    className="flex justify-between items-center p-3 bg-white border shadow-md mb-4"
                 >
                     {/* Food Info - Left Side */}
                     <div className="flex-1">
@@ -65,13 +66,15 @@ const FoodList = ({ addToCart, removeFromCart, cart }) => {
 
                     {/* Image and Rating - Right Side */}
                     <div className="ml-4 text-center">
-                        <Image
-                            src={item.image}
-                            alt={item.name}
-                            width={100}
-                            height={100}
-                            className="h-24 w-40 object-cover rounded-lg"
-                        />
+                        <div className="border border-gray-500 rounded-2xl overflow-hidden w-40 h-36"> {/* Fixed size container */}
+                            <Image
+                                src={item.image}
+                                alt={item.name}
+                                width={100}
+                                height={100}
+                                className="h-full w-full object-cover" // Image fills the container while maintaining aspect ratio
+                            />
+                        </div>
                         {/* Rating Section - Below the Image */}
                         <div className="flex justify-center items-center mt-2">
                             <span className="text-sm font-medium text-gray-500">⭐</span>

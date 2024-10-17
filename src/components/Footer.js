@@ -8,7 +8,7 @@ const Footer = ({ total, cart }) => {
   return (
     total > 0 && (
       <div className="fixed bottom-5 w-full px-4">
-        <div className="rounded-xl bg-orange-500 text-white p-4 flex justify-between items-center">
+        <div className="rounded-xl bg-orange-500 text-white p-3 flex justify-between items-center">
           <span className="text-lg font-bold">Total ₹{total}</span>
           <Link
             href={`/viewcart?cart=${cartString}`}

@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useState } from 'react';
-
 import Image from 'next/image';
 import { useRouter } from 'next/navigation'; // Import useRouter to navigate
 import Navbar from "@/components/Navbar";
@@ -54,7 +53,7 @@ const ViewCart = () => {
   return (
     <>
       <Navbar />
-      <div className="p-4 bg-gray-100 min-h-screen">
+      <div className="p-4 bg-gray-100 min-h-screen flex flex-col pb-16"> {/* Added padding-bottom for footer */}
         {/* Header */}
         <div className="flex items-center justify-between pb-4">
           <div className="flex items-center">
@@ -131,10 +130,12 @@ const ViewCart = () => {
           <span>Total Balance</span>
           <span>₹{totalBalance}</span>
         </div>
+      </div>
 
-        {/* Payment Button */}
+      {/* Fixed Payment Button Footer */}
+      <div className="fixed bottom-0 left-0 right-0 px-4 py-5">
         <button
-          className={`mt-6 w-full bg-orange-500 text-white py-3 rounded-md font-bold text-lg ${cartItems.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`w-full bg-orange-500 text-white py-3 rounded-md font-bold text-lg ${cartItems.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
           disabled={cartItems.length === 0}
           onClick={handlePayment} // Navigate to payment when clicked
         >
