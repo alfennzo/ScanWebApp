@@ -1,9 +1,10 @@
-'use client';
+'use client'
 import { useState, useEffect } from 'react';
 import Banner from '@/components/Banner';
 import FoodList from '@/components/FoodList';
 import Footer from '@/components/Footer';
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
+import Popup from '@/components/Popup';
 
 // Brand name passed to components
 const brandName = 'Haldiram';
@@ -11,6 +12,20 @@ const brandName = 'Haldiram';
 export default function Home() {
   const [cart, setCart] = useState({});
   const [total, setTotal] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Show popup after 5 seconds if not already shown
+  useEffect(() => {
+    const hasSeenPopup = sessionStorage.getItem('hasSeenPopup');
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        sessionStorage.setItem('hasSeenPopup', 'true');
+      }, 1000);
+
+      return () => clearTimeout(timer); // Cleanup timer on component unmount
+    }
+  }, []);
 
   // Load cart from sessionStorage on component mount
   useEffect(() => {
@@ -59,7 +74,10 @@ export default function Home() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
+
+      {/* Popup that shows after 5 seconds */}
+      {showPopup && <Popup onClose={() => setShowPopup(false)} />}
 
       {/* Banner Section */}
       <Banner brand={brandName} />
